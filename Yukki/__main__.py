@@ -256,7 +256,7 @@ async def start_command(_, message):
                     user = (
                         user.first_name if not user.mention else user.mention
                     )
-                    sex += 1
+                   sex += 1
                 except Exception:
                     continue
                 text += f"{sex}➤ {user}\n"
