@@ -53,11 +53,7 @@ async def awaiting_message(client, message):
             f"**Spam Detect Block On Assistant**\n\n- **Blocked User:** {message.from_user.mention}\n- **User ID:** {message.from_user.id}",
         )
         return await client.block_user(user_id)
-    await message.reply_text(
-        f"Hello, I am {MUSIC_BOT_NAME}'s Assistant.\n\nPlease dont spam here , else you'll get blocked.\nFor more Help start :- @{BOT_USERNAME}"
-    )
-
-
+    
 @Client.on_message(
     filters.command("approve", prefixes=ASSISTANT_PREFIX)
     & filters.user(SUDOERS)
